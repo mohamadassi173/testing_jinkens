@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    stages {
+
+        //
+        stage("mvnw package") {
+            steps {
+                sh "./mvnw package"
+            }
+        }
+        //
+        
+        stage("java -jar target/*.jar") {
+            steps {
+                sh "java -jar target/*.jar"
+            }
+        }
+    }
+}
