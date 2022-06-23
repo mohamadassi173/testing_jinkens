@@ -3,7 +3,7 @@ pipeline {
     
     stages {
 
-        //
+        
         stage("mvnw package") {
             steps {
                 sh "sudo -s"
