@@ -3,19 +3,16 @@ pipeline {
     
     stages {
 
-        
-        stage("mvnw package") {
+        stage("Build") {
             steps {
-                sh "sudo -s"
-                sh "mvn package"
+                sh "mvn clean package"
             }
         }
-     
+        //
         
-        
-        stage("java -jar target/*.jar") {
+        stage("Save Artifact") {
             steps {
-                sh "java -jar target/*.jar"
+                archiveArtifacts artifacts: '*/.jar', followSymlinks: false
             }
         }
     }
