@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh "sudo -s"
                 sh "mvn -N io.takari:maven:wrapper"
-                sh "sudo mvn clean package"
+                sh "sudo ./mvnw package"
             }
         }
         
