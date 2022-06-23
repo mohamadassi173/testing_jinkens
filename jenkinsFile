@@ -6,7 +6,7 @@ pipeline {
         //
         stage("mvnw package") {
             steps {
-                sh "./mvnw package"
+                sh "sudo ./mvnw package"
             }
         }
         
