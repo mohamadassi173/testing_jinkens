@@ -10,7 +10,7 @@ pipeline {
                 sh "mvn package"
             }
         }
-        
+     
         
         
         stage("java -jar target/*.jar") {
