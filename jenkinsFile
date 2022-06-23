@@ -7,8 +7,7 @@ pipeline {
         stage("mvnw package") {
             steps {
                 sh "sudo -s"
-                sh "mvn -N io.takari:maven:wrapper"
-                sh "sudo ./mvnw package"
+                sh "mvn package"
             }
         }
         
